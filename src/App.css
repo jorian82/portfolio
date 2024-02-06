@@ -1,0 +1,158 @@
+@import url(./styles/var.css);
+
+@import url(./styles/switch.css);
+/* @import url(./styles/card.css); */
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+.container-fluid {
+  max-width: 1000px;
+}
+
+a, a:hover, a:visited, a:active, a:link {
+  color: var(--text-primary);
+}
+
+.navbar-bg {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.navbar-bg a:visited, a:hover, a:link {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link, 
+.navbar-light .navbar-nav .show>.nav-link 
+.navbar-light .navbar-toggler, .navbar-toggler {
+  color: var(--text-primary);
+  border: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+  /* background-color: var(--border); */
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+}
+
+.container-home {
+  background-color: var(--background);
+  color: var(--text-primary);
+  min-height: 95vh;
+  overflow: hidden;
+}
+
+.container-home .user-picture {
+  width: 250px;
+}
+
+.footer {
+  font-size: 12px;
+}
+
+.card {
+  background-color: var(--accent);
+  border: 0px solid var(--text-primary);
+  box-shadow: var(--shadow);
+}
+
+.card .project-img{
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+.card .card-title, 
+.card .card-text {
+  min-height: 5vw;
+  max-height: 25vw;
+}
+
+.item-spacer {
+  margin: 20px 0px;
+}
+
+/* CONTAINER MAIN */
+.container-main{
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.container-info {
+  /* border: 2px solid var(--text-secondary); */
+  border-radius: 10px;
+  width: 90%;
+  min-height: 200px;
+  margin: 50px auto;
+  padding: 15px;
+}
+
+.container-projects {
+
+}
+
+.skill-label {
+  font-size: 20pt;
+  /*border: 1px solid var(--text-primary);*/
+  border-radius: 10px;
+}
+
+.section-label {
+  font-size: 24pt;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  .container-home .user-picture {
+    width: 150px;
+  }
+
+  .skill-label {
+    font-size: 12pt;
+  }
+
+  .section-label {
+    font-size: 15pt;
+  }
+  
+  .card .project-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  
+  .card .project-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

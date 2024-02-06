@@ -1,0 +1,74 @@
+.title-tag {
+    font-weight: 700;
+    font-size: 30pt;
+}
+
+.subtitle-tag {
+    font-weight: 500;
+    font-size: 15pt;
+}
+
+.details-tag {
+    font-size: 15pt;
+}
+
+.cv-tag {
+    font-size: 20pt;
+}
+
+.other-tag {
+    font-size: 15pt;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.justify-align {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.sub-label {
+    font-size: 10pt;
+}
+
+.important {
+    color: var(--important);
+}
+
+@media screen and (max-width: 480px) {
+    .container-home .user-picture {
+      width: 150px;
+    }
+
+    .sub-label {
+        font-size: 8pt;
+    }
+    
+    .title-tag {
+        font-weight: 700;
+        font-size: 20pt;
+    }
+    
+    .subtitle-tag {
+        font-weight: 500;
+        font-size: 10pt;
+    }
+    
+    .details-tag {
+        font-size: 10pt;
+    }
+    
+    .other-tag {
+        font-size: 10pt;
+    }
+}
