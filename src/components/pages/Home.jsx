@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../../styles/home.css'
 import jra_square from '../../assets/jra_square.png'
 import { LinkLaunchModal } from '../common/Dialog.jsx';
