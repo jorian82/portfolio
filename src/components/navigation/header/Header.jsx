@@ -1,4 +1,5 @@
 import {LinkLaunchModal} from "../../common/Dialog.jsx";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
     return (
@@ -10,9 +11,10 @@ export const Header = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarToggler">
                     <ul className="navbar-nav">
-                        <NavItem id="#profileModal" target="#profile">Profile</NavItem>
-                        <NavItem id="#projectsModal" target="#projects">Projects</NavItem>
-                        <NavItem id="#skillsModal" target="#skills">Skills</NavItem>
+                        <LinkItem target="/">Home</LinkItem>
+                        <LinkItem target="/profile">Profile</LinkItem>
+                        <LinkItem target="/projects">Projects</LinkItem>
+                        <LinkItem target="/skills">Skills</LinkItem>
                     </ul>
                 </div>
             </div>
@@ -25,6 +27,16 @@ export const NavItem = (props) => {
         <li className="nav-item">
             <span className={"nav-link"}>
                 <LinkLaunchModal modalId={props.id} label={props.children} />
+            </span>
+        </li>
+    )
+}
+
+export const LinkItem = (props) => {
+    return (
+        <li className="nav-item">
+            <span className={"nav-link"}>
+                <Link to={props.target}>{props.children}</Link>
             </span>
         </li>
     )
