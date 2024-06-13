@@ -27,29 +27,20 @@ export const Profile = () => {
 
     return (
         <>
-            <div className="container-fluid">
-                <Section label="Contact" />
-                {contactRows}
-            </div>
-            <hr />
-            <div className="container-fluid">
-                <Section label="Education" />
-                {educationRows}
-            </div>
-            <hr />
-            <Experience />
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-12 details-tag right-align">Download resumé&nbsp;
-                        <span className="important">
-                            <a href='https://drive.google.com/file/d/1-ooHnNKs5FCh2ZWhYdFSuTf5iO6oYIBw/view?usp=sharing' target='_blank' className='important' rel="noreferrer">
-                                <FontAwesomeIcon icon={faFilePdf} className='important' />
-                            </a>
-                        </span>
-                    </div>
+            <div className="">
+                <div className="container-fluid">
+                    <Section label="Contact" />
+                    {contactRows}
                 </div>
+                <hr />
+                <div className="container-fluid">
+                    <Section label="Education" />
+                    {educationRows}
+                </div>
+                <hr />
+                <Experience />
             </div>
-         </>
+        </>
     )
 }
 

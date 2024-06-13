@@ -6,3 +6,13 @@ export const Section = (props) => {
         </div>
     )
 }
+
+export const Spacer = () => {
+    return (
+        <div className="row">
+            <div className="col-12">
+                <Section label="&nbsp;"/>
+            </div>
+        </div>
+    )
+}

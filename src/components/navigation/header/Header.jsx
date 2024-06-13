@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export const Header = () => {
     return (
-        <nav className="navbar sticky-top navbar-expand-sm navbar-light navbar-bg">
+        <nav className="navbar fixed-top navbar-expand-sm navbar-light navbar-bg">
             <div className="container-fluid">
                 <span className="navbar-brand" href="#">Jorge Rivera</span>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,5 +39,17 @@ export const LinkItem = (props) => {
                 <Link to={props.target}>{props.children}</Link>
             </span>
         </li>
+    )
+}
+
+export const LinkToPage = (props) => {
+    return (
+        <div className="row">
+            <div className="col-12 right-align">
+                {/*<span className="modal-link" data-bs-toggle="modal" data-bs-target={props.modalId}>{props.label}</span>*/}
+                <Link to={props.target}>{props.children}</Link>
+            </div>
+        </div>
+
     )
 }

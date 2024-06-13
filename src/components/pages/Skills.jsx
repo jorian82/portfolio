@@ -3,17 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNodeJs, faPython, faJava, faJs, faJira, faBitbucket, faSass, faGithub, faAngular, faCss3, faGitlab, faLinux, faWindows, faApple, faGoogleDrive } from "@fortawesome/free-brands-svg-icons";
 import { faCloud, faClipboard, faDatabase, faServer, faCubes, faComputer } from "@fortawesome/free-solid-svg-icons";
 
-import { Section } from "../common/Section.jsx";
-import { LinkLaunchModal } from "../common/Dialog.jsx";
+import {Section, Spacer} from "../common/Section.jsx";
 
 const prevSkills = [
-    {key:0, icon: faJava,       label: "Java"},     
-    {key:2, icon: faDatabase,   label: "Relational DBs"},    
-    {key:3, icon: faJs,         label: "Javascript"},
-    {key:4, icon: faAngular,    label: "Angular 2+"},
-    {key:5, icon: faGithub,     label: "GitHub"},   
-    {key:1, icon: faGoogleDrive,label: "Drive"},   
-    // {key:41,icon: faServer,     label: "WebServices"},
+    {key:17, icon: faJava,       label: "Java"},
+    {key:13, icon: faDatabase,   label: "Relational DBs"},
+    {key:14, icon: faJs,         label: "Javascript"},
+    {key:15, icon: faAngular,    label: "Angular 2+"},
+    {key:16, icon: faGithub,     label: "GitHub"},
+    {key:12, icon: faGoogleDrive,label: "Drive"},
+    {key:18, icon: faServer,     label: "WebServices"},
 ]
 
 const skillPairs = [
@@ -48,14 +47,10 @@ export const Skills = (props) => {
     let moreAvailable = <span />;
     let titleAvailable = <span />;
 
-    if(props.type==='preview') {
-        moreAvailable = <LinkLaunchModal modalId="#skillsModal" label="More..." />;
-        titleAvailable = <Section label="Skills"/>;
-        rows = prevSkills.map(item => <Skill icon={item.icon} label={item.label}  key={item.key} />)
-    } else {
-        details = skillDetails.map(item => <DetailedSkills icon={item.icon} detail={item.detail} key={props.key} /> )
-        rows = skillPairs.map(item => <Skill icon={item.icon} label={item.label}  key={item.key} />);
-    }
+    titleAvailable = <Section label="Skills"/>;
+    rows = prevSkills.map(item => <Skill icon={item.icon} label={item.label}  key={item.key} />)
+    details = skillDetails.map(item => <DetailedSkills icon={item.icon} detail={item.detail} key={props.key} /> )
+    rows.push(...skillPairs.map(item => <Skill icon={item.icon} label={item.label}  key={item.key} />));
 
     return (
         <div className="container-fluid container-info">
@@ -63,6 +58,7 @@ export const Skills = (props) => {
             <div className="row align-items-center g-3">
                 {details}
             </div>
+            <Spacer />
             <div className="row align-items-center g-3">
                 {rows}
             </div>

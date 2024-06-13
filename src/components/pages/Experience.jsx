@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Section } from "../common/Section";
+import {Section, Spacer} from "../common/Section";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faFilePdf} from "@fortawesome/free-solid-svg-icons";
 
 const experienceList = [
     {label:"Concentrix / WebHelp", period:"(03/2022 - Present)", role:"Java FullStack Developer - Tonalá, Jalisco", 
@@ -85,16 +87,29 @@ export const Experience = () => {
 
 export const DetailExperience = () => {
     return (
-        <div className="row left-align">
-            <div className="col-12 subtitle-tag left-align">Experience details are in the resume below &nbsp;</div>
-        </div>
-    )
+        <>
+            <div className="row left-align">
+                <div className="col-12 subtitle-tag left-align">Experience details are in the resume below &nbsp;</div>
+            </div>
+            <div className="row">
+                <div className="col-12 details-tag right-align">Download resumé&nbsp;
+                    <span className="important">
+                        <a href='https://drive.google.com/file/d/1-ooHnNKs5FCh2ZWhYdFSuTf5iO6oYIBw/view?usp=sharing'
+                           target='_blank' className='important' rel="noreferrer">
+                            <FontAwesomeIcon icon={faFilePdf} className='important'/>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <Spacer />
+        </>
+)
 }
 
 export const ExperienceItem = (props) => {
     return (
         <div className="row left-align">
-            <div className="col-12 details-tag left-align"> <span className="label">{props.label} {props.period}</span><br /><span className="sub-label">{props.role}</span></div>
+            <div className="col-12 details-tag left-align"><span className="label">{props.label} {props.period}</span><br /><span className="sub-label">{props.role}</span></div>
             <div className="col-12 subtitle-tag left-align">{props.description}&nbsp;</div>
         </div>
     )
