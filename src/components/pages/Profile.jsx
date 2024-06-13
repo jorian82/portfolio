@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
-import { Section } from "../common/Section"
+import { Section, Spacer } from "../common/Section"
 import { Experience } from "./Experience";
 
 const infoList = [
@@ -27,6 +27,7 @@ export const Profile = () => {
 
     return (
         <>
+            <Spacer />
             <div className="">
                 <div className="container-fluid">
                     <Section label="Contact" />

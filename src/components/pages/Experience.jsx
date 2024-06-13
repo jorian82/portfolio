@@ -103,13 +103,17 @@ export const DetailExperience = () => {
             </div>
             <Spacer />
         </>
-)
+    )
 }
 
 export const ExperienceItem = (props) => {
     return (
         <div className="row left-align">
-            <div className="col-12 details-tag left-align"><span className="label">{props.label} {props.period}</span><br /><span className="sub-label">{props.role}</span></div>
+            <div className="col-12 details-tag left-align">
+                <span className="label">{props.label} {props.period}</span>
+                <br />
+                <span className="sub-label">{props.role}</span>
+            </div>
             <div className="col-12 subtitle-tag left-align">{props.description}&nbsp;</div>
         </div>
     )

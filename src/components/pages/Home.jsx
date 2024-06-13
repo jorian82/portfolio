@@ -7,8 +7,6 @@ import {Spacer} from "../common/Section.jsx";
 export const Home = () => {
     return (
         <div className="container-info jumbotron container-home">
-            <Spacer />
-            <Spacer />
             <div className="row align-items-center">
                 <div className="col-md-3 col-sm-12">
                     <Picture imgsrc={jra_square} cssClass="user-picture" />
