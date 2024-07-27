@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DarkModeToggle } from "../../helpers/DarkModeToggle.jsx";
 
 export const Footer = () => {
-    let year = new Date().getFullYear()
+    let year = new Date().getFullYear();
     return (
         <nav className="navbar fixed-bottom navbar-bg footer">
             <div className="container-fluid">
